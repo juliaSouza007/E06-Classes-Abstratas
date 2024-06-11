@@ -4,15 +4,15 @@ public abstract class Conta {
     private Cliente donoConta;
     private Operacao[] operacoes = new Operacao[1000];
 
-    private double saldo = 15000;
+    protected double saldo = 15000;
 
     public static int totalContas = 0;
 
-    private int contador = 0;
+    protected int contador = 0;
 
-    private double limite;
+    protected double limite;
 
-    private int num;
+    protected int num;
 
     public Conta (Cliente donoConta, double saldo, int num) {
         this.num = num;
@@ -52,9 +52,9 @@ public abstract class Conta {
     }
 
     public String toString() {
-        String str = "<< Conta " + this.num + " >>\n" +
+        String str = "<< Conta " + donoConta.getNome() + " >>\n" +
                 this.donoConta.toString() + "\n" +
-                "Saldo: " + this.saldo + "\n" +
+                "Saldo : " + this.saldo + "\n" +
                 "Limite: " + this.limite + "\n" +
                 "\n";
         return str;
