@@ -9,16 +9,14 @@ public class Main {
         PessoaFisica pF3 = new PessoaFisica("Juliaa", "rs", data, "155.495.816-47", 16, 'F');
         PessoaJuridica pJ = new PessoaJuridica("CHURRASIC PARK", "rua dos dinossauros", data, "24 405 890/0001-86", "Alimenticio", 5);
 
-        Conta contaPF1 = new Conta(pF1, 100000, 80000, 0);
-        Conta contaPF2 = new Conta(pF2, 50000, 10000, 1);
-        Conta contaPJ = new Conta(pJ, 500000, 100000, 2);
+        ContaCorrente contaPF1 = new ContaCorrente(pF1, 1000000, 100000, 0);
+        ContaCorrente contaPF2 = new ContaCorrente(pF2, 1000000, 500000, 1);
+        ContaUniversitaria contaPF3 = new ContaUniversitaria(pF3, 200, 200, 3);
+        ContaCorrente contaPJ = new ContaCorrente(pJ, 1000000, 500000, 2);
 
         System.out.println("<< BANCO JMSZ >>\n<< IMPRIMINDO INFORMACOES DOS CLIENTES >>");
-        System.out.println("\n<< Conta " + pF1.getNome() + " >>");
         System.out.println(contaPF1.toString());
-        System.out.println("\n<< Conta " + pF2.getNome() + " >>");
         System.out.println(contaPF2.toString());
-        System.out.println("\n<< Conta " + pJ.getNome() + " >>");
         System.out.println(contaPJ.toString());
 
         System.out.println("\n<< REALIZANDO OPERACOES >>");
